@@ -7,19 +7,58 @@
 <h:head>
 </h:head>
 <h:body>
-    <h:form>
-    	<p:panelGrid columns="1">
-        	 <p:commandButton value="Inserir Agente" action="/pages/cadastroAgente"></p:commandButton>
-        	 <p:commandButton value="Inserir Categoria" action="/pages/cadastroCategoria"></p:commandButton>
-        	 <p:commandButton value="Inserir Modelo" action="/pages/cadastroModelo"></p:commandButton>
-        	 <p:commandButton value="Inserir Proprietario" action="/pages/cadastroProprietario"></p:commandButton>
-        	 <p:commandButton value="Inserir Veiculo" action="/pages/cadastroVeiculo"></p:commandButton>
-        	 <p:commandButton value="Inserir Telefone" action="/pages/cadastroTelefone"></p:commandButton>
-        	 <p:commandButton value="Inserir Tipo de Telefone" action="/pages/cadastroTipoTelefone"></p:commandButton>
-        	 <p:commandButton value="Inserir Tipo de Infracao" action="/pages/cadastroTipoInfracao"></p:commandButton>
-        	 <p:commandButton value="Inserir Infracao" action="/pages/cadastroInfracao"></p:commandButton>
-        	  <p:commandButton value="Inserir Local Infracao" action="/pages/cadastroLocalInfracao"></p:commandButton> 
-         </p:panelGrid>
-    </h:form>
+   <h:form>  
+ 
+    <p:menubar>
+        <p:submenu label="Agente" icon="ui-icon-document">
+            <p:menuitem value="Cadastro" url="/pages/cadastroAgente" />
+               <p:separator />
+            <p:menuitem value="Editar" url="/pages/editarAgente" />
+        </p:submenu>
+        <p:submenu label="Categoria" icon="ui-icon-document">
+            <p:menuitem value="Cadastro" url="/pages/cadastroCategoria" />
+               <p:separator />
+            <p:menuitem value="Editar" url="/pages/editarCategoria" />
+        </p:submenu>
+         <p:submenu label="Modelo Veiculo" icon="ui-icon-document">
+            <p:menuitem value="Cadastro" url="/pages/cadastroModelo" />
+               <p:separator />
+            <p:menuitem value="Editar" url="/pages/editarModelo" />
+         </p:submenu>
+          <p:submenu label="Proprietario" icon="ui-icon-document">
+            <p:menuitem value="Cadastro" url="/pages/cadastroProprietario" />
+               <p:separator />
+            <p:menuitem value="Editar" url="/pages/editarProprietario" />
+         </p:submenu>
+         <p:submenu label="Veiculo" icon="ui-icon-document">
+            <p:menuitem value="Cadastro" url="/pages/cadastroVeiculo" />
+               <p:separator />
+            <p:menuitem value="Editar" url="/pages/editarVeiculo" />
+         </p:submenu>
+         <p:submenu label="Telefone" icon="ui-icon-document">
+            <p:menuitem value="Cadastro do Tipo do Telefone" url="/pages/cadastroTipoTelefone" />
+               <p:separator />
+            <p:menuitem value="Cadastro do Telefone" url="/pages/cadastroTelefone" />
+               <p:separator />
+            <p:menuitem value="Editar Tipo de Telefone" url="/pages/editarTipoTelefone" />
+              <p:separator />
+             <p:menuitem value="Editar Telefone" url="/pages/editarTelefone" />
+         </p:submenu>
+           <p:submenu label="Infrações" icon="ui-icon-document">
+            <p:menuitem value="Cadastro do Tipo da infração" url="/pages/cadastroTipoInfracao" />
+               <p:separator />
+            <p:menuitem value="Cadastro do local da infração" url="/pages/cadastroLocalInfracao" />
+               <p:separator />
+            <p:menuitem value="Cadastro da infração" url="/pages/cadastroInfracao" />
+               <p:separator />
+            <p:menuitem value="Editar Tipo da infração" url="/pages/editarTipoInfracao" />
+              <p:separator />
+             <p:menuitem value="Editar local da infração" url="/pages/editarLocalInfracao" />
+                      <p:separator />
+            <p:menuitem value="Editar infração" url="/pages/editarInfracao" />
+         </p:submenu>
+ 
+   </p:menubar>
+</h:form>
 </h:body>
 </html>
