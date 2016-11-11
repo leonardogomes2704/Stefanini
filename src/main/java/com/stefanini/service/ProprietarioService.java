@@ -27,7 +27,11 @@ public class ProprietarioService {
 	}
 	
 	public Proprietario buscar(String cpf) {
-		return proprietarioRepository.buscar(cpf);
+		ArrayList<Proprietario> proprietarios = new Proprietario();
+		proprietarios.addAll(proprietarioRepository.buscar(cpf));
+		if(proprietarios..size() == 0)
+			return null;
+		return proprietarios.get(0);
 	}
 
 }
