@@ -13,6 +13,10 @@
 	         <p:inputText value="#{veiculoMB.veiculo.placa}"/>
 	         <p:outputLabel value="Digite o CPF do proprietario:"/>	
 	         <p:inputText value="#{veiculoMB.cpfProprietario}"/>
+		 <p:outputLabel for="modelo" value="Selecione o Modelo: "  />
+	    	 <p:selectOneMenu id="modelo"  value="#{veiculoMB.idModelo}" >  
+                       <f:selectItems value="#{modeloMB.listaModelo()}" var="item" itemLabel="#{item.descricaoModelo}" itemValue="#{item.idModelo}"/>  
+                 </p:selectOneMenu>  
 	         <p:outputLabel value="Digite a UF do veiculo:"/>
 	          <p:selectOneMenu id="uf" value="#{veiculoMB.veiculo.uf}" style="width:125px">
 	            <f:selectItem itemLabel="Acre" itemValue="AC" />
