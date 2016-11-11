@@ -58,5 +58,7 @@ public class ModeloBean implements Serializable{
 		  modeloService.incluir(modelo);
 		  return "/index.xhtml";
 	   }
-	  
+	public Modelo buscar(int idModelo) {
+		return modeloService.buscar(idCategoria);
+	}
 }
