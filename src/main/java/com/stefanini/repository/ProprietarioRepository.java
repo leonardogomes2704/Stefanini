@@ -20,8 +20,8 @@ public class ProprietarioRepository {
 				.getResultList();
 	}
 	
-	public Proprietario buscar(String cpf ) {
-		return (Proprietario) manager.createQuery("select c FROM Proprietario c where c.cpfProprietario = :cpfProprietario").setParameter("cpfProprietario", cpf);
+	public List<Proprietario>  buscar(String cpf ) {
+		return this.manager.createQuery("SELECT p FROM Proprietario p WHERE p.cpfProprietario='"+cpf+"'").getResultList();
 	}
 }
 
