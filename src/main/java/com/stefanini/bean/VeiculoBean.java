@@ -23,6 +23,10 @@ public class VeiculoBean implements Serializable {
 	
 	@Inject
 	private VeiculoService veiculoService;
+	
+	@Inject
+	private ModeloBean modeloBean;
+	
 
 	
 	public Veiculo getVeiculo() {
@@ -42,6 +46,8 @@ public class VeiculoBean implements Serializable {
 	}
 
 	public String salvarVeiculo(){
+		veiculo.setModelo(modeloBean.buscar(idModelo));	
+		veiculo.setProprietario(proprietarioBean.buscar(cpf));
 		veiculoService.incluir(veiculo);
 		return "/index.xhtml";
 	}
