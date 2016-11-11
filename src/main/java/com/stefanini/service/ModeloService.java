@@ -34,4 +34,8 @@ public class ModeloService {
 		return modeloRepository.lista();
 	}
 	
+	public Modelo buscar(int idModelo) {
+		return modeloRepository.buscar(idModelo);
+	}
+	
 }
